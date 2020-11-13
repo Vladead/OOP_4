@@ -9,15 +9,15 @@ class ShapeAccumulator {
         shapes.addAll(collection)
     }
 
-    fun getTotalArea(): Double = shapes.sumByDouble { i -> i.calcArea() }
+    fun getTotalArea(): Double = shapes.sumByDouble { it.calcArea() }
 
-    fun getTotalPerimeter(): Double = shapes.sumByDouble { i -> i.calcPerimeter() }
+    fun getTotalPerimeter(): Double = shapes.sumByDouble { it.calcPerimeter() }
 
-    fun getMinAreaShape(): Shape? = shapes.minByOrNull { i -> i.calcArea() }
+    fun getMinAreaShape(): Shape? = shapes.minByOrNull { it.calcArea() }
 
-    fun getMaxAreaShape(): Shape? = shapes.maxByOrNull { i -> i.calcArea() }
+    fun getMaxAreaShape(): Shape? = shapes.maxByOrNull { it.calcArea() }
 
-    fun getMaxPerimeterShape(): Shape? = shapes.maxByOrNull { i -> i.calcPerimeter() }
+    fun getMaxPerimeterShape(): Shape? = shapes.maxByOrNull { it.calcPerimeter() }
 
-    fun getMinPerimeterShape(): Shape? = shapes.minByOrNull { i -> i.calcPerimeter() }
+    fun getMinPerimeterShape(): Shape? = shapes.minByOrNull { it.calcPerimeter() }
 }
